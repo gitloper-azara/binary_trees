@@ -16,10 +16,12 @@
 14-balance
 15-full
 16-perfect
+9-perfect.c
 17-sibling
 18-uncle
 *.sh
 
 # Files
 *main.c
+main_9.c
 binary_tree_print.c
