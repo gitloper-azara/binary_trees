@@ -8,14 +8,17 @@
 
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	binary_tree_t *parent = node->parent;
+	binary_tree_t *parent;
 
 	if (!node || !(node->parent))
 		return (NULL);
 
+    parent = node->parent;
+
 	/* if the node is a child of its parent or if parent itself */
 	if (!(parent->left) || !(parent->right))
 		return (NULL);
+
 
 	/* check if the node is the left child of its parent */
 	if (parent->left == node)
