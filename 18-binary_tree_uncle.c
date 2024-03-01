@@ -42,13 +42,13 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	binary_tree_t *parent;
 
-	if (!node)
+	if (!node || !(node->parent))
 		return (NULL);
 
 	parent = node->parent;
 
 	/* check if the node is the left child of its parent */
-	if (!parent->parent)
+	if (!(parent->parent))
 		return (NULL);
 
 	return (binary_tree_sibling(parent));
